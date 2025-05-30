@@ -36,5 +36,90 @@ Durante este módulo, explorei as estruturas básicas de repetição em C# e cri
 
 ---
 
-## 📂 Organização do Projeto
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string opcao;
+        bool exibirMenu = true;
+
+        while (exibirMenu)
+        {
+            Console.WriteLine("Digite a sua opção:");
+            Console.WriteLine("1- Cadastrar cliente");
+            Console.WriteLine("2- Buscar cliente");
+            Console.WriteLine("3- Apagar cliente");
+            Console.WriteLine("4- Encerrar");
+
+            opcao = Console.ReadLine();
+
+            switch (opcao)
+            {
+                case "1":
+                    Console.WriteLine("Cadastro de cliente");
+                    break;
+                case "2":
+                    Console.WriteLine("Busca de cliente");
+                    break;
+                case "3":
+                    Console.WriteLine("Apagar cliente");
+                    break;
+                case "4":
+                    Console.WriteLine("Encerrar");
+                    exibirMenu = false;
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida");
+                    break;
+            }
+        }
+
+        Console.WriteLine("O programa se encerrou");
+    }
+}
+📁 Projeto 2 - Tabuada
+Cálculo da tabuada do número 5 usando for.
+
+Código:
+csharp
+Copiar
+Editar
+int numero = 5;
+for (int contador = 0; contador <= 10; contador++)
+{
+    Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+}
+
+📁 Projeto 3 - Soma com do while
+Soma de números digitados até o usuário digitar 0.
+
+Código:
+csharp
+Copiar
+Editar
+int soma = 0, numero = 0;
+do
+{
+    Console.WriteLine("Digite um número:");
+    numero = Convert.ToInt32(Console.ReadLine());
+    soma += numero;
+} while (numero != 0);
+
+Console.WriteLine($"Total da soma dos números digitados é: {soma}");
+👨‍💻 Desenvolvido por
+Paulo Henrique Santana Motta ✨
+
+markdown
+Copiar
+Editar
+
+### ✅ Dicas para deixar mais organizado:
+
+- Use `##` para seções principais.
+- Use `###` ou `####` para subtítulos ou projetos internos.
+- Pode até colocar divisores com `---` entre seções.
+
+Se quiser, posso montar a estrutura toda com base em todos os códigos que você tiver. É só mandar!
 
